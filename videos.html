@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Videos - Giriraj Industries</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+        <div class="floating-circle circle-4"></div>
+        <div class="floating-circle circle-5"></div>
+        <div class="floating-circle circle-6"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="eco-badge">
+                    <img src="images/logo.png" alt="Eco Power Logo" class="logo-image">
+                </div>
+                <div class="company-info">
+                    <img src="images/GIRIRAJ INDUSTRIES (1).jpg" alt="Giriraj Industries" class="company-logo">
+                </div>
+            </div>
+            <div class="download-section">
+                <a href="pdf/Giriraj_Industries_Brochure.pdf" download="Giriraj_Industries_Brochure.pdf" target="_blank" class="download-btn">
+                    <i class="fas fa-download"></i>
+                    <span class="download-text">Download Brochure</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#FFFFFF"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#FFFFFF"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FFFFFF"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Products</span>
+            </a>
+
+            <div class="video-title-section">
+                <div class="product-info">
+                    <div class="product-icon-large" id="productIconLarge">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h1 class="product-name" id="productName">Loading...</h1>
+                    <p class="product-subtitle" id="productSubtitle"></p>
+                </div>
+            </div>
+
+            <!-- Navigation tabs for products with multiple categories -->
+            <div class="product-nav-tabs" id="navTabs" style="display: none;">
+                <!-- Tabs will be generated dynamically -->
+            </div>
+
+            <!-- Loading spinner -->
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Loading videos...</p>
+            </div>
+
+            <!-- Video containers -->
+            <div class="video-grid" id="videoContainer">
+                <!-- Videos will be loaded dynamically -->
+            </div>
+
+            <div class="no-videos-message" id="noVideosMessage" style="display: none;">
+                <div class="no-videos-icon">
+                    <i class="fas fa-video-slash"></i>
+                </div>
+                    <a href="tel:+919825213536" class="contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="contact-person">
+                    <h3 class="footer-name">
+                        <i class="fas fa-user-tie"></i>
+                        SHAILESH MOVALIYA
+                    </h3>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919825213536" class="footer-link">+91 9825213536</a>
+                        <a href="https://wa.me/919825213536" target="_blank" class="footer-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919825213524" class="footer-link">+91 9825213524</a>
+                        <a href="https://wa.me/919825213524" target="_blank" class="footer-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:greenecopower1@gmail.com" class="footer-link">greenecopower1@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://www.google.com/maps/search/?api=1&query=628%2F5%2C+Vav+Gam%2C+Pasodara+Gam+To%2C+Patiya+Road%2C+Kamrej%2C+Pasodara%2C+Surat%2C+Gujarat+394326" target="_blank" class="footer-link">
+                            628/5, Vav Gam, Pasodara Gam To, Patiya Road, Kamrej, Pasodara, Surat, Gujarat 394326
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product video data structure with icons
+        const productVideos = {
+            'Namkeen': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/3480/3480693.png',
+                
+                categories: {
+                    'Batch Fryer': [
+                        { src: 'videos/NAMKIN/VID-20250211-WA0026.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0030.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0031.mp4' }
+                    ],
+                    'Continuous Fryer': [
+                        { src: 'videos/NAMKIN/VID-20250211-WA0032.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0034.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0035.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0038.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0040.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0045.mp4' },
+                        { src: 'videos/NAMKIN/VID-20250211-WA0049.mp4' }
+                    ]
+                }
+            },
+            'Peanut': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553691.png',
+               
+                categories: {
+                    'Batch Roaster': [
+                        { src: 'videos/SING BATCH ROSTAR/VID-20250212-WA0001.mp4' },
+                        { src: 'videos/SING BATCH ROSTAR/VID-20250212-WA0003.mp4' },
+                        { src: 'videos/SING BATCH ROSTAR/VID-20250212-WA0004.mp4' },
+                        { src: 'videos/SING BATCH ROSTAR/VID-20250212-WA0005.mp4' },
+                        { src: 'videos/SING BATCH ROSTAR/VID-20250212-WA0006.mp4' }
+                    ],
+                    'Continuous Roaster': [
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0007.mp4' },
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0009.mp4' },
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0010.mp4' },
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0011.mp4' },
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0012.mp4' },
+                        { src: 'videos/SING CONTINUS ROSTAR/VID-20250212-WA0013.mp4' }
+                    ],
+                    'Bhathhi': [
+                        { src: 'videos/SING BHATHI/VID-20250211-WA0041.mp4' },
+                        { src: 'videos/SING BHATHI/VID-20250211-WA0042.mp4' },
+                        { src: 'videos/SING BHATHI/VID-20250211-WA0043.mp4' },
+                        { src: 'videos/SING BHATHI/VID-20250211-WA0044.mp4' },
+                        { src: 'videos/SING BHATHI/VID-20250212-WA0002.mp4' }
+                    ]
+                }
+            },
+            'Chana': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553620.png',
+                
+                videos: [
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0014.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0015.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0016.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0017.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0018.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0019.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0020.mp4' },
+                    { src: 'videos/CHANA ROSTER/VID-20250212-WA0021.mp4' }
+                ]
+            },
+            'Fryms': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553744.png',
+                
+                videos: [
+                    { src: 'videos/friyams/VID-20250211-WA0033.mp4' },
+                    { src: 'videos/friyams/VID-20250211-WA0050.mp4' },
+                    { src: 'videos/friyams/VID-20250211-WA0052.mp4' },
+                    { src: 'videos/friyams/VID-20250211-WA0053.mp4' }
+                ]
+            },
+            'Chikki': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553699.png',
+               
+                videos: [
+                    { src: 'videos/CHIKI/VID-20250211-WA0004.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0010.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0011.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0012.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0013.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0014.mp4' },
+                    { src: 'videos/CHIKI/VID-20250211-WA0015.mp4' }
+                ]
+            },
+            'Banana Chips': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553648.png',
+               
+                videos: [
+                    { src: 'videos/kela wafer/VID-20250211-WA0021.mp4' },
+                    { src: 'videos/kela wafer/VID-20250211-WA0022.mp4' },
+                    { src: 'videos/kela wafer/VID-20250211-WA0023.mp4' },
+                    { src: 'videos/kela wafer/VID-20250211-WA0024.mp4' },
+                    { src: 'videos/kela wafer/VID-20250211-WA0025.mp4' },
+                    { src: 'videos/kela wafer/VID-20250211-WA0051.mp4' }
+                ]
+            },
+            'Papad': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/3480/3480648.png',
+               
+                videos: [
+                    { src: 'videos/PAPAD/VID-20250211-WA0016.mp4' },
+                    { src: 'videos/PAPAD/VID-20250211-WA0017.mp4' },
+                    { src: 'videos/PAPAD/VID-20250211-WA0019.mp4' },
+                    { src: 'videos/PAPAD/VID-20250211-WA0020.mp4' }
+                ]
+            },
+            'Milk': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553591.png',
+                
+                categories: {
+                    'Milk Processing': [
+                        { src: 'videos/milk process/milk.mp4' }
+                    ],
+                    'Milk Khoya Machine': [
+                        { src: 'videos/milk - khoya machine/VID-20250401-WA0001.mp4' },
+                        { src: 'videos/milk - khoya machine/VID-20250401-WA0002.mp4' },
+                        { src: 'videos/milk - khoya machine/VID-20250401-WA0003.mp4' }
+                    ]
+                }
+            },
+            'Maida Items': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553712.png',
+               
+                categories: {
+                    'Panipuri': [
+                        { src: 'videos/panipuri/VID-20250404-WA0005.mp4' }
+                    ],
+                    'Menda Puri': [
+                        { src: 'videos/MENDA PURI/VID-20250211-WA0027.mp4' },
+                        { src: 'videos/MENDA PURI/VID-20250211-WA0036.mp4' },
+                        { src: 'videos/MENDA PURI/VID-20250211-WA0037.mp4' },
+                        { src: 'videos/MENDA PURI/VID-20250211-WA0039.mp4' },
+                        { src: 'videos/MENDA PURI/VID-20250211-WA0048.mp4' },
+                        { src: 'videos/CHAKKRI/VID-20250211-WA0029.mp4' }
+                    ]
+                }
+            },
+            'Murmura': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553740.png',
+                
+                videos: [
+                    { src: 'videos/murmura/VID-20250329-WA0000.mp4' }
+                ]
+            },
+            'Steam Boiler': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/3039/3039386.png',
+               
+                videos: [
+                    { src: 'videos/STEM BOILER/VID-20250211-WA0001.mp4' },
+                    { src: 'videos/STEM BOILER/VID-20250211-WA0002.mp4' },
+                    { src: 'videos/STEM BOILER/VID-20250211-WA0003.mp4' },
+                    { src: 'videos/STEM BOILER/VID-20250212-WA0000.mp4' }
+                ]
+            },
+            'Hot Water System': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/3039/3039298.png',
+                
+                videos: [
+                    { src: 'videos/HOT WATER/VID-20250212-WA0022.mp4' },
+                    { src: 'videos/HOT WATER/VID-20250212-WA0023.mp4' },
+                    { src: 'videos/HOT WATER/VID-20250212-WA0024.mp4' },
+                    { src: 'videos/HOT WATER/VID-20250212-WA0025.mp4' },
+                    { src: 'videos/HOT WATER/VID-20250212-WA0026.mp4' }
+                ]
+            },
+            'Aluminium': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553580.png',
+               
+                videos: [
+                    { src: 'videos/Aluminium/VID-20250211-WA0005.mp4' },
+                    { src: 'videos/Aluminium/VID-20250211-WA0006.mp4' },
+                    { src: 'videos/Aluminium/VID-20250211-WA0007.mp4' },
+                    { src: 'videos/Aluminium/VID-20250211-WA0008.mp4' },
+                    { src: 'videos/Aluminium/VID-20250211-WA0009.mp4' },
+                    { src: 'videos/Aluminium/VID-20250414-WA0012.mp4' }
+                ]
+            },
+            'Cello Tape': {
+                icon: 'https://cdn-icons-png.flaticon.com/512/2740/2740651.png',
+                
+                videos: [
+                    { src: 'videos/CELO TEP/VID-20250211-WA0018.mp4' }
+                ]
+            }
+        };
+
+        // Get product name from URL parameter
+        function getProductFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('product') || 'Unknown Product';
+        }
+
+        // Create navigation tabs for products with categories
+        function createNavigationTabs(categories) {
+            const navTabs = document.getElementById('navTabs');
+            navTabs.innerHTML = '';
+
+            Object.keys(categories).forEach((category, index) => {
+                const tab = document.createElement('button');
+                tab.className = `nav-tab ${index === 0 ? 'active' : ''}`;
+                tab.textContent = category;
+                tab.onclick = () => showCategoryVideos(category, categories);
+                navTabs.appendChild(tab);
+            });
+
+            navTabs.style.display = 'flex';
+        }
+
+        // Show videos for a specific category
+        function showCategoryVideos(activeCategory, categories) {
+            // Update active tab
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.textContent === activeCategory) {
+                    tab.classList.add('active');
+                }
+            });
+
+            // Show videos for the active category
+            displayVideos(categories[activeCategory]);
+        }
+
+        function displayVideos(videos) {
+            const container = document.getElementById('videoContainer');
+            container.innerHTML = '';
+
+            videos.forEach((video, index) => {
+                const videoCard = document.createElement('div');
+                videoCard.className = 'video-card';
+                videoCard.style.animationDelay = `${index * 0.1}s`;
+
+                const videoWrapper = document.createElement('div');
+                videoWrapper.className = 'video-wrapper';
+
+                const v = document.createElement('video');
+                v.controls = true;
+                v.muted = true;
+                v.defaultMuted = true;
+                v.playsInline = true;
+                v.preload = 'metadata';
+                v.className = 'video-player';
+
+                const src = document.createElement('source');
+                src.src = video.src;
+                src.type = 'video/mp4';
+                v.appendChild(src);
+
+                // Video overlay with play button
+                const overlay = document.createElement('div');
+                overlay.className = 'video-overlay';
+                overlay.innerHTML = `
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                `;
+
+                // Error fallback
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'video-error';
+                errorDiv.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Video not available</p>
+                    <small>${video.src}</small>
+                `;
+                errorDiv.style.display = 'none';
+
+                v.addEventListener('error', () => {
+                    videoWrapper.style.display = 'none';
+                    errorDiv.style.display = 'flex';
+                });
+
+                v.addEventListener('loadstart', () => {
+                    overlay.style.display = 'flex';
+                });
+
+                v.addEventListener('play', () => {
+                    overlay.style.display = 'none';
+                });
+
+                v.addEventListener('pause', () => {
+                    overlay.style.display = 'flex';
+                });
+
+                overlay.addEventListener('click', () => {
+                    if (v.paused) {
+                        v.play();
+                    } else {
+                        v.pause();
+                    }
+                });
+
+                videoWrapper.appendChild(v);
+                videoWrapper.appendChild(overlay);
+                videoCard.appendChild(videoWrapper);
+                videoCard.appendChild(errorDiv);
+                container.appendChild(videoCard);
+            });
+
+            // Ensure all videos remain muted
+            document.querySelectorAll('.video-player').forEach(v => {
+                v.muted = true;
+                v.defaultMuted = true;
+                v.volume = 0;
+            });
+        }
+
+        // Check if element is in viewport for auto-pause
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+            const videoHeight = rect.height;
+            return visibleHeight / videoHeight >= 0.5;
+        }
+
+        function handleVideoVisibility() {
+            document.querySelectorAll('.video-player').forEach(video => {
+                if (!isElementInViewport(video)) {
+                    video.pause();
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleVideoVisibility);
+        window.addEventListener('resize', handleVideoVisibility);
+
+        // Initialize the page
+        function initializePage() {
+            const productName = getProductFromURL();
+            const productData = productVideos[productName];
+
+            // Hide loading spinner
+            setTimeout(() => {
+                document.getElementById('loadingSpinner').style.display = 'none';
+
+                // Update product info
+                document.getElementById('productName').textContent = productName;
+                
+                if (productData) {
+                    const iconElement = document.getElementById('productIconLarge');
+                    iconElement.innerHTML = `<img src="${productData.icon}" alt="${productName}" class="product-icon-img">`;
+                    
+                    document.getElementById('productSubtitle').textContent = productData.subtitle;
+
+                    if (productData.categories) {
+                        // Product has multiple categories
+                        createNavigationTabs(productData.categories);
+                        const firstCategory = Object.keys(productData.categories)[0];
+                        showCategoryVideos(firstCategory, productData.categories);
+                    } else if (productData.videos) {
+                        // Product has simple video list
+                        displayVideos(productData.videos);
+                    } else {
+                        // No videos available
+                        document.getElementById('noVideosMessage').style.display = 'block';
+                    }
+                } else {
+                    // No product data
+                    document.getElementById('noVideosMessage').style.display = 'block';
+                }
+            }, 1000);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', initializePage);
+    </script>
+</body>
+
+</html>
