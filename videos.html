@@ -59,9 +59,9 @@
 
             <div class="video-title-section">
                 <div class="product-info">
-                    <div class="product-icon-large" id="productIconLarge">
+                    <!-- <div class="product-icon-large" id="productIconLarge">
                         <i class="fas fa-cog"></i>
-                    </div>
+                    </div> -->
                     <h1 class="product-name" id="productName">Loading...</h1>
                     <p class="product-subtitle" id="productSubtitle"></p>
                 </div>
@@ -138,12 +138,11 @@
             </div>
         </div>
     </footer>
-
-    <script>
+<script>
         // Product video data structure with icons
         const productVideos = {
             'Namkeen': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/3480/3480693.png',
+                // icon: 'icons/namkeen.png',
                 
                 categories: {
                     'Batch Fryer': [
@@ -163,7 +162,7 @@
                 }
             },
             'Peanut': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553691.png',
+                // icon: 'icons/peanut.png',
                
                 categories: {
                     'Batch Roaster': [
@@ -191,7 +190,7 @@
                 }
             },
             'Chana': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553620.png',
+                // icon: 'icons/chana.png',
                 
                 videos: [
                     { src: 'videos/CHANA ROSTER/VID-20250212-WA0014.mp4' },
@@ -205,7 +204,7 @@
                 ]
             },
             'Fryms': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553744.png',
+                // icon: 'icons/fryms.png',
                 
                 videos: [
                     { src: 'videos/friyams/VID-20250211-WA0033.mp4' },
@@ -215,7 +214,7 @@
                 ]
             },
             'Chikki': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553699.png',
+                // icon: 'icons/chikki.png',
                
                 videos: [
                     { src: 'videos/CHIKI/VID-20250211-WA0004.mp4' },
@@ -228,7 +227,7 @@
                 ]
             },
             'Banana Chips': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553648.png',
+                // icon: 'icons/banana_chips.png',
                
                 videos: [
                     { src: 'videos/kela wafer/VID-20250211-WA0021.mp4' },
@@ -240,7 +239,7 @@
                 ]
             },
             'Papad': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/3480/3480648.png',
+                // icon: 'icons/papad.png',
                
                 videos: [
                     { src: 'videos/PAPAD/VID-20250211-WA0016.mp4' },
@@ -250,7 +249,7 @@
                 ]
             },
             'Milk': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553591.png',
+                // icon: 'icons/milk.png',
                 
                 categories: {
                     'Milk Processing': [
@@ -264,7 +263,7 @@
                 }
             },
             'Maida Items': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553712.png',
+                // icon: 'icons/maida_items.png',
                
                 categories: {
                     'Panipuri': [
@@ -281,14 +280,14 @@
                 }
             },
             'Murmura': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553740.png',
+                // icon: 'icons/murmura.png',
                 
                 videos: [
                     { src: 'videos/murmura/VID-20250329-WA0000.mp4' }
                 ]
             },
             'Steam Boiler': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/3039/3039386.png',
+                // icon: 'icons/steam_boiler.png',
                
                 videos: [
                     { src: 'videos/STEM BOILER/VID-20250211-WA0001.mp4' },
@@ -298,7 +297,7 @@
                 ]
             },
             'Hot Water System': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/3039/3039298.png',
+                // icon: 'icons/hot_water_system.png',
                 
                 videos: [
                     { src: 'videos/HOT WATER/VID-20250212-WA0022.mp4' },
@@ -309,7 +308,7 @@
                 ]
             },
             'Aluminium': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2553/2553580.png',
+                // icon: 'icons/aluminium.png',
                
                 videos: [
                     { src: 'videos/Aluminium/VID-20250211-WA0005.mp4' },
@@ -321,7 +320,7 @@
                 ]
             },
             'Cello Tape': {
-                icon: 'https://cdn-icons-png.flaticon.com/512/2740/2740651.png',
+                // icon: 'icons/cello_tape.png',
                 
                 videos: [
                     { src: 'videos/CELO TEP/VID-20250211-WA0018.mp4' }
@@ -333,6 +332,41 @@
         function getProductFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get('product') || 'Unknown Product';
+        }
+
+        // Enhanced cross-platform video muting function
+        function ensureVideosMuted() {
+            document.querySelectorAll('.video-player').forEach(video => {
+                // Set multiple mute properties for maximum compatibility
+                video.muted = true;
+                video.defaultMuted = true;
+                video.volume = 0;
+                
+                // Set HTML attributes for better cross-platform support
+                video.setAttribute('muted', 'true');
+                video.setAttribute('defaultmuted', 'true');
+                video.setAttribute('playsinline', 'true');
+                
+                // iOS-specific handling
+                if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                    video.setAttribute('webkit-playsinline', 'true');
+                    video.playsInline = true;
+                }
+                
+                // Prevent unmuting on user interaction
+                video.addEventListener('volumechange', function() {
+                    if (!this.muted || this.volume > 0) {
+                        this.muted = true;
+                        this.volume = 0;
+                    }
+                }, { once: false });
+                
+                // Additional safety for touch devices
+                video.addEventListener('touchstart', function() {
+                    this.muted = true;
+                    this.volume = 0;
+                }, { once: false });
+            });
         }
 
         // Create navigation tabs for products with categories
@@ -378,12 +412,24 @@
                 videoWrapper.className = 'video-wrapper';
 
                 const v = document.createElement('video');
+                
+                // Enhanced video attributes for cross-platform compatibility
                 v.controls = true;
                 v.muted = true;
                 v.defaultMuted = true;
                 v.playsInline = true;
                 v.preload = 'metadata';
                 v.className = 'video-player';
+                v.volume = 0;
+                
+                // Set HTML attributes
+                v.setAttribute('muted', 'true');
+                v.setAttribute('defaultmuted', 'true');
+                v.setAttribute('playsinline', 'true');
+                v.setAttribute('webkit-playsinline', 'true'); // iOS Safari
+                v.setAttribute('x5-playsinline', 'true'); // WeChat browser
+                v.setAttribute('x5-video-player-type', 'h5'); // Tencent X5 browser
+                v.setAttribute('x-webkit-airplay', 'allow');
 
                 const src = document.createElement('source');
                 src.src = video.src;
@@ -393,11 +439,6 @@
                 // Video overlay with play button
                 const overlay = document.createElement('div');
                 overlay.className = 'video-overlay';
-                // overlay.innerHTML = `
-                //     <div class="play-button">
-                //         <i class="fas fa-play"></i>
-                //     </div>
-                // `;
 
                 // Error fallback
                 const errorDiv = document.createElement('div');
@@ -409,6 +450,7 @@
                 `;
                 errorDiv.style.display = 'none';
 
+                // Enhanced event handlers
                 v.addEventListener('error', () => {
                     videoWrapper.style.display = 'none';
                     errorDiv.style.display = 'flex';
@@ -416,22 +458,55 @@
 
                 v.addEventListener('loadstart', () => {
                     overlay.style.display = 'flex';
+                    // Ensure muting on load start
+                    v.muted = true;
+                    v.volume = 0;
+                });
+
+                v.addEventListener('loadedmetadata', () => {
+                    // Double-check muting after metadata loads
+                    v.muted = true;
+                    v.volume = 0;
                 });
 
                 v.addEventListener('play', () => {
                     overlay.style.display = 'none';
+                    // Ensure still muted when playing
+                    v.muted = true;
+                    v.volume = 0;
                 });
 
                 v.addEventListener('pause', () => {
                     overlay.style.display = 'flex';
                 });
 
-                overlay.addEventListener('click', () => {
+                // Enhanced overlay click handler
+                overlay.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
                     if (v.paused) {
-                        v.play();
+                        // Ensure muted before playing
+                        v.muted = true;
+                        v.volume = 0;
+                        v.play().then(() => {
+                            // Double-check after play promise resolves
+                            v.muted = true;
+                            v.volume = 0;
+                        }).catch(err => {
+                            console.log('Play failed:', err);
+                        });
                     } else {
                         v.pause();
                     }
+                });
+
+                // Force mute after any media events
+                ['loadstart', 'loadeddata', 'canplay', 'canplaythrough', 'play'].forEach(eventType => {
+                    v.addEventListener(eventType, function() {
+                        this.muted = true;
+                        this.volume = 0;
+                    });
                 });
 
                 videoWrapper.appendChild(v);
@@ -441,12 +516,10 @@
                 container.appendChild(videoCard);
             });
 
-            // Ensure all videos remain muted
-            document.querySelectorAll('.video-player').forEach(v => {
-                v.muted = true;
-                v.defaultMuted = true;
-                v.volume = 0;
-            });
+            // Apply enhanced muting to all newly created videos
+            setTimeout(() => {
+                ensureVideosMuted();
+            }, 100);
         }
 
         // Check if element is in viewport for auto-pause
@@ -458,8 +531,13 @@
             return visibleHeight / videoHeight >= 0.5;
         }
 
+        // Enhanced visibility check with mute enforcement
         function handleVideoVisibility() {
             document.querySelectorAll('.video-player').forEach(video => {
+                // Ensure videos remain muted regardless of visibility
+                video.muted = true;
+                video.volume = 0;
+                
                 if (!isElementInViewport(video)) {
                     video.pause();
                 }
@@ -468,6 +546,17 @@
 
         window.addEventListener('scroll', handleVideoVisibility);
         window.addEventListener('resize', handleVideoVisibility);
+
+        // Call ensureVideosMuted periodically to handle any edge cases
+        setInterval(() => {
+            ensureVideosMuted();
+        }, 3000);
+
+        // Also call on various events that might affect video state
+        window.addEventListener('focus', ensureVideosMuted);
+        window.addEventListener('blur', ensureVideosMuted);
+        window.addEventListener('visibilitychange', ensureVideosMuted);
+        window.addEventListener('pageshow', ensureVideosMuted);
 
         // Initialize the page
         function initializePage() {
@@ -482,8 +571,8 @@
                 document.getElementById('productName').textContent = productName;
                 
                 if (productData) {
-                    const iconElement = document.getElementById('productIconLarge');
-                    iconElement.innerHTML = `<img src="${productData.icon}" alt="${productName}" class="product-icon-img">`;
+                    // const iconElement = document.getElementById('productIconLarge');
+                    // // iconElement.innerHTML = `<img src="${productData.icon}" alt="${productName}" class="product-icon-img">`;
                     
                     document.getElementById('productSubtitle').textContent = productData.subtitle;
 
@@ -503,6 +592,12 @@
                     // No product data
                     document.getElementById('noVideosMessage').style.display = 'block';
                 }
+
+                // Ensure all videos are muted after initialization
+                setTimeout(() => {
+                    ensureVideosMuted();
+                }, 500);
+                
             }, 1000);
         }
 

@@ -546,7 +546,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-md);
+    /* gap: var(--spacing-md); */
 }
 
 .product-icon-large {
@@ -1883,5 +1883,184 @@ img {
     .nav-tab,
     .contact-item {
         background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Remove space between icon container and image - make image fill the container */
+
+.product-icon {
+    margin-bottom: var(--spacing-md);
+    padding: 0; /* Remove all padding */
+    background: rgba(46, 125, 50, 0.1);
+    border-radius: 50%; /* Make container fully circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    width: 120px;
+    height: 120px;
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.product-image {
+    width: 100%; /* Fill the entire container width */
+    height: 100%; /* Fill the entire container height */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+    border-radius: 50%; /* Make image circular */
+    transition: var(--transition);
+}
+
+/* For video page large icons */
+.product-icon-large {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%; /* Make container fully circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: var(--spacing-sm);
+    padding: 0; /* Remove padding */
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.product-icon-img {
+    width: 100%; /* Fill the entire container */
+    height: 100%; /* Fill the entire container */
+    object-fit: cover; /* Cover the entire area */
+    filter: brightness(1.2) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    border-radius: 50%; /* Make image circular */
+    transition: var(--transition);
+}
+
+/* Hover effects */
+.product-card:hover .product-icon {
+    transform: rotateY(360deg) scale(1.05);
+    background: rgba(46, 125, 50, 0.15);
+}
+
+.product-icon-large:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .product-icon {
+        width: 100px;
+        height: 100px;
+        padding: 0;
+    }
+    
+    .product-icon-large {
+        width: 90px;
+        height: 90px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .product-icon {
+        width: 90px;
+        height: 90px;
+        padding: 0;
+    }
+    
+    .product-icon-large {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* Remove background - show only logo */
+
+.eco-badge {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: transparent; /* Remove green background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none; /* Remove shadow */
+    animation: pulse 3s infinite;
+    transition: var(--transition);
+    padding: 0; /* No padding needed */
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Maintain logo's original proportions */
+    filter: brightness(1.2) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    border-radius: 50%; /* Make logo circular */
+    background: transparent; /* No background */
+}
+
+/* Hover effect - just for logo */
+.eco-badge:hover {
+    transform: scale(1.05);
+}
+
+.eco-badge:hover .logo-image {
+    transform: scale(1.02);
+    filter: brightness(1.3) drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .eco-badge {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .eco-badge {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .eco-badge {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 575px) {
+    .eco-badge {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .eco-badge {
+        width: 70px;
+        height: 70px;
     }
 }
